@@ -29,7 +29,6 @@ function createTable(num) {
     for (var i = 0; i < num; i++) {
         var tableRow = [];
         for (var j = 0; j < num; j++) {
-            // var cell = createCell(i,j);
             var cell = {
                 value: 0,
                 isClicked: false

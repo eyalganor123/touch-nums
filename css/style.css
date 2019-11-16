@@ -87,6 +87,10 @@ td{
     background-color:rgb(6, 72, 253);
     width:20%;
 }
+.level-coice:hover {
+    background-color:rgb(111, 144, 236);
+
+}
 .winner{
     font-size:60px;
     color: orange;
