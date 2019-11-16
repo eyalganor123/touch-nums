@@ -1,13 +1,13 @@
 body{
     background: rgb(2, 1, 0);
     margin:0;
-    font-family:impact;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:100px;
 
 }
 h1{
     position:fixed;
-    bottom:10px;
+    bottom:0;
     background-color: rgb(238, 164, 27);
     padding:10px;
     width:100%;
@@ -15,13 +15,15 @@ h1{
     font-size:20px;
     margin:0;
     text-align: center;
+    z-index:2;
 }
 #table{
     position:fixed;
     font-size:40px;
 
-    top:30%;
-    width:100%;
+    top:35%;
+    left:10%;
+    width:80%;
 }
 td{
     text-align:center;
@@ -30,19 +32,26 @@ td{
     line-height:300%;
 }
 
-.timer{
+.timer-container{
 
     position:fixed;
     top: 20%;
     /* left:2%; */
-    border:10px ridge gray;
+    border:5px ridge gray;
     color: yellow;
-    width:96%;
+    width:97%;
     background: transparent;
     text-align:left ;
     line-height:100%;
-    font-size:50px;
+    font-size:30px;
+    padding-bottom:10px ;
+    padding-top:10px ;
     
+}
+#timer{
+    position:relative;
+    font-size:50px;
+    left:15%;
 }
 #next-number{
     position:fixed;
@@ -56,10 +65,10 @@ td{
 }
 #level{
     position:fixed;
-    top:40%;
+    top:30%;
     /* left:30%; */
     width:100%;
-    height:50%;
+    height:100%;
     background-color: rgb(110, 4, 209);
     font-size:50px;
     text-align:center;
@@ -72,7 +81,7 @@ td{
     font-size:35%;
     position:relative;
     left:40%;
-    margin:10px;
+    margin:5px;
     border:3px solid black;
     border-radius:10px;
     background-color:rgb(6, 72, 253);

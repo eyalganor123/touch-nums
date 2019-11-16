@@ -93,7 +93,7 @@ function render() {
     if (gNextNumber !== 'WINNER') {
         elNextNumber.innerHTML = `<div><div class='next-number' style="background:rgb(23, 212, 156);font-size:100px">${gNextNumber}</div></div>`
     } else {
-        elNextNumber.innerHTML = `<div class='winner'>You Are A Winner</div>`
+        elNextNumber.innerHTML = `<div class='winner' style="background:red;font-size:30px">You Are A Winner</div>`
     }
     elTimer.innerText = gTimer;
 
@@ -142,7 +142,7 @@ function playAgain() {
     document.querySelector('h1').innerText = "Touch the Numbers";
     gElLevel.style.display = 'block';
     var strHtml = ""
-    strHtml = `<div>please choose a level</div>`
+    strHtml = `<div style="background: transparent;font-size:35px; margin:20px">please choose a level</div>`
     strHtml += `<div class='level-choice' onclick="init(3)">3</div>`
     strHtml += `<div class='level-choice' onclick="init(4)">4</div>`
     strHtml += `<div class='level-choice' onclick="init(5)">5</div>`
