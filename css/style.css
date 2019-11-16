@@ -21,9 +21,9 @@ h1{
     position:fixed;
     font-size:40px;
 
-    top:35%;
-    left:10%;
-    width:80%;
+    top:25%;
+    /* left:10%; */
+    width:100%;
 }
 td{
     text-align:center;
@@ -35,7 +35,7 @@ td{
 .timer-container{
 
     position:fixed;
-    top: 20%;
+    top: 10%;
     /* left:2%; */
     color: yellow;
     width:97%;
@@ -54,13 +54,12 @@ td{
 }
 #next-number{
     position:fixed;
-    border:10px ridge gray;
+    border:10px solid gray;
     width:96%;
     /* background: rgb(23, 212, 156); */
     text-align:center;
-    line-height:100%;
+    line-height:50%;
     color: yellow;
-    
 }
 #level{
     position:fixed;

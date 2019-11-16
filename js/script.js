@@ -91,7 +91,7 @@ function render() {
     }
     elTable.innerHTML = strHtml;
     if (gNextNumber !== 'WINNER') {
-        elNextNumber.innerHTML = `<div><div class='next-number' style="background:rgb(23, 212, 156);font-size:100px">${gNextNumber}</div></div>`
+        elNextNumber.innerHTML = `<div><div class='next-number' style="background:rgb(23, 212, 156);font-size:40px">${gNextNumber}</div></div>`
     } else {
         elNextNumber.innerHTML = `<div class='winner' style="background:red;font-size:30px">You Are A Winner</div>`
     }
@@ -151,7 +151,6 @@ function playAgain() {
     strHtml += `<div class='level-choice' onclick="init(8)">8</div>`
     strHtml += `<div class='level-choice' onclick="init(9)">9</div>`
     strHtml += `<div class='level-choice' onclick="init(10)">10</div>`
-    gElLevel.innerHTML = strHtml;
-    gIsLevelDisplayed = true;
+    gElLevel.innerHTML = strHtml;    gIsLevelDisplayed = true;
 
 }
