@@ -29,6 +29,7 @@ function createTable(num) {
     for (var i = 0; i < num; i++) {
         var tableRow = [];
         for (var j = 0; j < num; j++) {
+            // var cell = createCell(i,j);
             var cell = {
                 value: 0,
                 isClicked: false
@@ -130,8 +131,8 @@ function startInterval() {
 }
 
 function playAgain() {
-    if (gIsLevelDisplayed === false) {
-    gTable = [];}
+    // if (gIsLevelDisplayed === false) {
+    gTable = [];
     if (gInterval) {
         clearInterval(gInterval)
     };
@@ -139,8 +140,7 @@ function playAgain() {
     gNextNumber = 1;
     render();
     document.querySelector('h1').innerText = "Touch the Numbers";
-    var elLevel = document.querySelector('#level');
-    elLevel.style.display = 'block';
+    gElLevel.style.display = 'block';
     var strHtml = ""
     strHtml = `<div style="background: transparent;font-size:25px; margin-bottom:20px">please choose a level</div>`
     strHtml += `<div class='level-choice' onclick="init(3)">3</div>`
@@ -151,7 +151,7 @@ function playAgain() {
     strHtml += `<div class='level-choice' onclick="init(8)">8</div>`
     strHtml += `<div class='level-choice' onclick="init(9)">9</div>`
     strHtml += `<div class='level-choice' onclick="init(10)">10</div>`
-    elLevel.innerHTML = strHtml;
+    gElLevel.innerHTML = strHtml;
     gIsLevelDisplayed = true;
 
 }
