@@ -17,6 +17,7 @@ h1{
     margin:0;
     text-align: center;
     z-index:2;
+    border:10px sold black;
 }
 #table{
     position:fixed;
@@ -37,7 +38,6 @@ td{
 
     position:fixed;
     top: 18%;
-    /* left:2%; */
     color: yellow;
     width:97%;
     background: transparent;
@@ -62,7 +62,6 @@ td{
     color: yellow;
 }
 #level{
-   display: flex;
     position:fixed;
     top:30%;
     width:100%;
