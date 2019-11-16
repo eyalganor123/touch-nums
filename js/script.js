@@ -9,17 +9,19 @@ var gInterval;
 var gIsGameOn = false;
 var gTimer;
 var gIsLevelDisplayed = false;
+var gElLevel = document.querySelector('#level');
 
 function init(level) {
     if (level === 0) {
         playAgain()
     } else {
-        document.querySelector('#level').style.display = 'none';
+        gElLevel.style.display = 'none';
         document.querySelector('h1').innerText = "Restart";
     }
     gTimer = 0;
     gTable = createTable(level);
-    createRandomTableValues(gTable);
+    randomizeTableValues(gTable);
+    console.table(gTable);
     render();
 }
 
@@ -27,6 +29,7 @@ function createTable(num) {
     for (var i = 0; i < num; i++) {
         var tableRow = [];
         for (var j = 0; j < num; j++) {
+            // var cell = createCell(i,j);
             var cell = {
                 value: 0,
                 isClicked: false
@@ -46,7 +49,7 @@ function createCell(i, j) {
     return cell;
 }
 
-function createRandomTableValues(table) {
+function randomizeTableValues(table) {
     var nums = [];
     var tableSize = table.length;
     for (var i = 1; i <= tableSize * tableSize; i++) {
@@ -88,11 +91,9 @@ function render() {
     }
     elTable.innerHTML = strHtml;
     if (gNextNumber !== 'WINNER') {
-        elNextNumber.innerHTML = `<div><div class='next-number' 
-        style="background:rgb(23, 212, 156);font-size:100px">${gNextNumber}</div></div>`
+        elNextNumber.innerHTML = `<div><div class='next-number' style="background:rgb(23, 212, 156);font-size:100px">${gNextNumber}</div></div>`
     } else {
-        elNextNumber.innerHTML = `<div class='winner'
-         style="background:red;font-size:30px">You Are A Winner</div>`
+        elNextNumber.innerHTML = `<div class='winner' style="background:red;font-size:30px">You Are A Winner</div>`
     }
     elTimer.innerText = gTimer;
 
@@ -138,10 +139,10 @@ function playAgain() {
     gInterval = '';
     gNextNumber = 1;
     render();
-    var level = document.querySelector('h1').innerText = "Touch the Numbers";
-    level.style.display = 'block';
+    document.querySelector('h1').innerText = "Touch the Numbers";
+    gElLevel.style.display = 'block';
     var strHtml = ""
-    strHtml = `<div style="background: transparent;font-size:35px; margin:20px">please choose a level</div>`
+    strHtml = `<div style="background: transparent;font-size:25px; margin-bottom:20px">please choose a level</div>`
     strHtml += `<div class='level-choice' onclick="init(3)">3</div>`
     strHtml += `<div class='level-choice' onclick="init(4)">4</div>`
     strHtml += `<div class='level-choice' onclick="init(5)">5</div>`
@@ -150,7 +151,7 @@ function playAgain() {
     strHtml += `<div class='level-choice' onclick="init(8)">8</div>`
     strHtml += `<div class='level-choice' onclick="init(9)">9</div>`
     strHtml += `<div class='level-choice' onclick="init(10)">10</div>`
-    level.innerHTML = strHtml;
+    gElLevel.innerHTML = strHtml;
     gIsLevelDisplayed = true;
 
 }
