@@ -131,7 +131,7 @@ function startInterval() {
 
 function playAgain() {
     if (gIsLevelDisplayed === false) {
-    gTable = [];
+    gTable = [];}
     if (gInterval) {
         clearInterval(gInterval)
     };
