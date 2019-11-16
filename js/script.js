@@ -143,14 +143,14 @@ function playAgain() {
     gElLevel.style.display = 'block';
     var strHtml = ""
     strHtml = `<div style="background: transparent;font-size:25px; margin-bottom:20px">please choose a level</div>`
-    strHtml += `<div class='level-choice' onclick="init(3)">3</div>`
-    strHtml += `<div class='level-choice' onclick="init(4)">4</div>`
-    strHtml += `<div class='level-choice' onclick="init(5)">5</div>`
-    strHtml += `<div class='level-choice' onclick="init(6)">6</div>`
-    strHtml += `<div class='level-choice' onclick="init(7)">7</div>`
-    strHtml += `<div class='level-choice' onclick="init(8)">8</div>`
-    strHtml += `<div class='level-choice' onclick="init(9)">9</div>`
-    strHtml += `<div class='level-choice' onclick="init(10)">10</div>`
+    strHtml += `<span class='level-choice' onclick="init(3)">1</span>`
+    strHtml += `<span class='level-choice' onclick="init(4)">2</span>`
+    strHtml += `<span class='level-choice' onclick="init(5)">3</span>`
+    strHtml += `<span class='level-choice' onclick="init(6)">4</span><br><br>`
+    strHtml += `<span class='level-choice' onclick="init(7)">5</span>`
+    strHtml += `<span class='level-choice' onclick="init(8)">6</span>`
+    strHtml += `<span class='level-choice' onclick="init(9)">7</span>`
+    strHtml += `<span class='level-choice' onclick="init(10)">8</span>`
     gElLevel.innerHTML = strHtml;    gIsLevelDisplayed = true;
 
 }
