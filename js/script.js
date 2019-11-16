@@ -140,7 +140,7 @@ function playAgain() {
     render();
     document.querySelector('h1').innerText = "Touch the Numbers";
     var elLevel = document.querySelector('#level');
-    ellLevel.style.display = 'block';
+    elLevel.style.display = 'block';
     var strHtml = ""
     strHtml = `<div style="background: transparent;font-size:25px; margin-bottom:20px">please choose a level</div>`
     strHtml += `<div class='level-choice' onclick="init(3)">3</div>`
@@ -151,7 +151,7 @@ function playAgain() {
     strHtml += `<div class='level-choice' onclick="init(8)">8</div>`
     strHtml += `<div class='level-choice' onclick="init(9)">9</div>`
     strHtml += `<div class='level-choice' onclick="init(10)">10</div>`
-    ellLevel.innerHTML = strHtml;
+    elLevel.innerHTML = strHtml;
     gIsLevelDisplayed = true;
 
 }
