@@ -51,7 +51,7 @@ td{
 #timer{
     position:fixed;
     font-size:20px;
-    /* left: 45%; */
+    left: 45%;
 }
 #next-number{
     position:fixed;
