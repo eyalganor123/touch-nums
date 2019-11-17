@@ -91,7 +91,7 @@ function render() {
     }
     elTable.innerHTML = strHtml;
     if (gNextNumber !== 'WINNER') {
-        elNextNumber.innerHTML = `<div><div class='next-number' style="background:rgb(23, 212, 156);font-size:40px">${gNextNumber}</div></div>`
+        elNextNumber.innerHTML = `<div><div class='next-number' style="font-size:30px">${gNextNumber}</div></div>`
     } else {
         elNextNumber.innerHTML = `<div class='winner' style="background:red;font-size:30px">You Are A Winner</div>`
     }
